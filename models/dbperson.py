@@ -1,6 +1,6 @@
 from config import db
 
-class Employee(db.Model):
+class DbPerson(db.Model):
     __tablename__='people'
     sno=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(30),index=False,unique=False,nullable=False)
