@@ -1,6 +1,5 @@
-from flask import Flask
-
-app = Flask(__name__)
+from config import app
+import routes
 
 @app.route("/")
 def hello():
