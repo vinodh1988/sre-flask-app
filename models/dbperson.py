@@ -4,7 +4,7 @@ class DbPerson(db.Model):
     __tablename__='people'
     sno=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(30),index=False,unique=False,nullable=False)
-    city=db.Column(db.Striung(30),index=False,unique=False,nullable=False)
+    city=db.Column(db.String(30),index=False,unique=False,nullable=False)
     
 
     def __init__(self,sno,name,city):
