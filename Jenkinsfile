@@ -8,7 +8,7 @@ agent any
 stages {
 stage('Cloning our Git') {
 steps {
-git ''
+git 'https://github.com/vinodh1988/sre-flask-app'
 }
 }
 stage('Building our image') {
