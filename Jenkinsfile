@@ -14,7 +14,7 @@ git 'https://github.com/vinodh1988/sre-flask-app'
 stage('Building our image') {
 steps{
 script {
-dockerImage = docker.build registry+"/"+ dockerImage + ":$BUILD_NUMBER"
+dockerNow = docker.build registry+"/"+ dockerImage + ":$BUILD_NUMBER"
 }
 }
 }
@@ -22,7 +22,7 @@ stage('Deploy our image') {
 steps{
 script {
 docker.withRegistry( '', registryCredential ) {
-dockerImage.push()
+dockerNow.push()
 }
 }
 }
